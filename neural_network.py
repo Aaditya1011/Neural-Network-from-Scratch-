@@ -14,7 +14,7 @@ class NeuralNetwork:
             input_size = layer_size[i]
             output_size = layer_size[i+1]
 
-            W = np.random.rand(input_size,output_size) * np.sqrt(1/input_size)
+            W = np.random.randn(input_size,output_size) * np.sqrt(2./input_size)
             b = np.zeros((1,output_size))
 
             self.weights.append(W)
@@ -122,7 +122,7 @@ class NeuralNetwork:
     def predict(self,X):
         return self.forward(X)
 
-
+print(__name__)
 
 if __name__ == "__main__":
 
